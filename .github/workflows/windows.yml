@@ -8,13 +8,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-
-      - name: Setup PHP with tools
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: '7.4'
-          tools: pecl
-
-      - name: Build
+      
+      - name: Setup
         run: |
-          pecl install package.xml
+          wget "https://github.com/microsoft/php-sdk-binary-tools/archive/php-sdk-2.2.0.zip" -OutFile php-sdk-2.2.0.zip
+          Expand-Archive -LiteralPath php-sdk-2.2.0.zip
+          wget "https://windows.php.net/downloads/releases/php-devel-pack-8.0.3-nts-Win32-vs16-x64.zip" -0utFile php-devel-pack-8.0.3-nts-Win32-vs16-x64.zip
+          Expand-Archive -LiteralPath php-devel-pack-8.0.3-nts-Win32-vs16-x64.zip
