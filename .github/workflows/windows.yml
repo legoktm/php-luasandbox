@@ -13,5 +13,5 @@ jobs:
         run: |
           Invoke-WebRequest "https://github.com/microsoft/php-sdk-binary-tools/archive/php-sdk-2.2.0.zip" -OutFile php-sdk-2.2.0.zip
           Expand-Archive -LiteralPath php-sdk-2.2.0.zip
-          Invoke-WebRequest "https://windows.php.net/downloads/releases/php-devel-pack-8.0.3-nts-Win32-vs16-x64.zip" -0utFile php-devel-pack-8.0.3-nts-Win32-vs16-x64.zip
+          Invoke-WebRequest "https://windows.php.net/downloads/releases/php-devel-pack-8.0.3-nts-Win32-vs16-x64.zip" -OutFile php-devel-pack-8.0.3-nts-Win32-vs16-x64.zip
           Expand-Archive -LiteralPath php-devel-pack-8.0.3-nts-Win32-vs16-x64.zip
